@@ -1,18 +1,22 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
-    "description": "",
+    "name": "zVPS/royal-mail-shipping-rest-api-client",
+    "description": "Royal Mail Shipping REST API Client",
     "keywords": [
         "swagger",
         "php",
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://github.com/zVPS/royal-mail-shipping-rest-api-client",
     "license": "proprietary",
     "authors": [
         {
             "name": "Swagger and contributors",
             "homepage": "https://github.com/swagger-api/swagger-codegen"
+        },
+        {
+            "name": "zVPS.uk",
+            "homepage": "https://zvps.uk"
         }
     ],
     "require": {
