@@ -1,0 +1,13 @@
+# Contact
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **string** | Contact name | 
+**complementaryName** | **string** | Business name | [optional] 
+**telephoneNumber** | **string** | UK mobile phone number. Required if a SMS service enhancement is selected. | [optional] 
+**email** | **string** | Email address to be used for notifications. Required if Email enhancement is selected | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
