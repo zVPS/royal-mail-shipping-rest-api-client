@@ -1,10 +1,11 @@
 <?php
+
 /**
  * ManifestApiTest
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +27,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client;
+namespace RoyalMail\Shipping\Rest\Api;
 
-use \RoyalMail\Shipping\Rest\Api\Client\Configuration;
-use \RoyalMail\Shipping\Rest\Api\Client\ApiException;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\Configuration;
+use \RoyalMail\Shipping\Rest\Api\ApiException;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * ManifestApiTest Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

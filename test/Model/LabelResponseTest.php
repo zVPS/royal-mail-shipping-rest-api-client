@@ -1,11 +1,12 @@
 <?php
+
 /**
  * LabelResponseTest
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +28,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client;
+namespace RoyalMail\Shipping\Rest\Api;
 
 /**
  * LabelResponseTest Class Doc Comment
@@ -35,7 +36,7 @@ namespace RoyalMail\Shipping\Rest\Api\Client;
  * @category    Class */
 // * @description LabelResponse
 /**
- * @package     RoyalMail\Shipping\Rest\Api\Client
+ * @package     RoyalMail\Shipping\Rest\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
