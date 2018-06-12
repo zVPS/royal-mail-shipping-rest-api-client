@@ -1,11 +1,12 @@
 <?php
+
 /**
  * ShipmentWithBarcodeAndWeight
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +28,16 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\models;
+namespace RoyalMail\Shipping\Rest\Api\models;
 
 use \ArrayAccess;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * ShipmentWithBarcodeAndWeight Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +58,8 @@ class ShipmentWithBarcodeAndWeight implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'shipmentItems' => '\RoyalMail\Shipping\Rest\Api\Client\models\ShipmentBarcodeItems',
-        'weight' => '\RoyalMail\Shipping\Rest\Api\Client\models\Measurement'
+        'shipmentItems' => '\RoyalMail\Shipping\Rest\Api\models\ShipmentBarcodeItems',
+        'weight' => '\RoyalMail\Shipping\Rest\Api\models\Measurement'
     ];
 
     /**
@@ -214,7 +215,7 @@ class ShipmentWithBarcodeAndWeight implements ModelInterface, ArrayAccess
     /**
      * Gets shipmentItems
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\ShipmentBarcodeItems
+     * @return \RoyalMail\Shipping\Rest\Api\models\ShipmentBarcodeItems
      */
     public function getShipmentItems()
     {
@@ -224,7 +225,7 @@ class ShipmentWithBarcodeAndWeight implements ModelInterface, ArrayAccess
     /**
      * Sets shipmentItems
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\ShipmentBarcodeItems $shipmentItems shipmentItems
+     * @param \RoyalMail\Shipping\Rest\Api\models\ShipmentBarcodeItems $shipmentItems shipmentItems
      *
      * @return $this
      */
@@ -238,7 +239,7 @@ class ShipmentWithBarcodeAndWeight implements ModelInterface, ArrayAccess
     /**
      * Gets weight
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\Measurement
+     * @return \RoyalMail\Shipping\Rest\Api\models\Measurement
      */
     public function getWeight()
     {
@@ -248,7 +249,7 @@ class ShipmentWithBarcodeAndWeight implements ModelInterface, ArrayAccess
     /**
      * Sets weight
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\Measurement $weight weight
+     * @param \RoyalMail\Shipping\Rest\Api\models\Measurement $weight weight
      *
      * @return $this
      */

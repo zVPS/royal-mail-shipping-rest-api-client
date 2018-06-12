@@ -1,11 +1,12 @@
 <?php
+
 /**
  * ShipmentRequestItem
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +28,17 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\models;
+namespace RoyalMail\Shipping\Rest\Api\models;
 
 use \ArrayAccess;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * ShipmentRequestItem Class Doc Comment
  *
  * @category Class
  * @description Item details. Up to 9 shipments can be created with one request.
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,9 +59,9 @@ class ShipmentRequestItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'offlineShipment' => '\RoyalMail\Shipping\Rest\Api\Client\models\OfflineShipment[]',
+        'offlineShipment' => '\RoyalMail\Shipping\Rest\Api\models\OfflineShipment[]',
         'count' => 'int',
-        'weight' => '\RoyalMail\Shipping\Rest\Api\Client\models\Measurement'
+        'weight' => '\RoyalMail\Shipping\Rest\Api\models\Measurement'
     ];
 
     /**
@@ -233,7 +234,7 @@ class ShipmentRequestItem implements ModelInterface, ArrayAccess
     /**
      * Gets offlineShipment
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\OfflineShipment[]
+     * @return \RoyalMail\Shipping\Rest\Api\models\OfflineShipment[]
      */
     public function getOfflineShipment()
     {
@@ -243,7 +244,7 @@ class ShipmentRequestItem implements ModelInterface, ArrayAccess
     /**
      * Sets offlineShipment
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\OfflineShipment[] $offlineShipment For offline barcoding shipments.
+     * @param \RoyalMail\Shipping\Rest\Api\models\OfflineShipment[] $offlineShipment For offline barcoding shipments.
      *
      * @return $this
      */
@@ -281,7 +282,7 @@ class ShipmentRequestItem implements ModelInterface, ArrayAccess
     /**
      * Gets weight
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\Measurement
+     * @return \RoyalMail\Shipping\Rest\Api\models\Measurement
      */
     public function getWeight()
     {
@@ -291,7 +292,7 @@ class ShipmentRequestItem implements ModelInterface, ArrayAccess
     /**
      * Sets weight
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\Measurement $weight weight
+     * @param \RoyalMail\Shipping\Rest\Api\models\Measurement $weight weight
      *
      * @return $this
      */

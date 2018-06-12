@@ -1,4 +1,4 @@
-# RoyalMail\Shipping\Rest\Api\Client\ShipmentApi
+# RoyalMail\Shipping\Rest\Api\ShipmentApi
 
 All URIs are relative to *https://localhost/shipping/v2*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **domesticPost**
-> \RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse domesticPost($xRMGAuthToken, $createDomesticBody)
+> \RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse domesticPost($xRMGAuthToken, $createDomesticBody)
 
 Operation to create a shipment
 
@@ -23,22 +23,22 @@ This method will take a domestic shipment request in the body and on successful 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 // Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\ShipmentApi(
+$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRMGAuthToken = "xRMGAuthToken_example"; // string | Authorisation token
-$createDomesticBody = new \RoyalMail\Shipping\Rest\Api\Client\models\Shipment(); // \RoyalMail\Shipping\Rest\Api\Client\models\Shipment | 
+$createDomesticBody = new \RoyalMail\Shipping\Rest\Api\models\Shipment(); // \RoyalMail\Shipping\Rest\Api\models\Shipment | 
 
 try {
     $result = $apiInstance->domesticPost($xRMGAuthToken, $createDomesticBody);
@@ -54,11 +54,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRMGAuthToken** | **string**| Authorisation token |
- **createDomesticBody** | [**\RoyalMail\Shipping\Rest\Api\Client\models\Shipment**](../Model/Shipment.md)|  |
+ **createDomesticBody** | [**\RoyalMail\Shipping\Rest\Api\models\Shipment**](../Model/Shipment.md)|  |
 
 ### Return type
 
-[**\RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse**](../Model/CreatedShipmentResponse.md)
+[**\RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse**](../Model/CreatedShipmentResponse.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentNumberDelete**
-> \RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse shipmentNumberDelete($shipmentNumber, $xRMGAuthToken)
+> \RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse shipmentNumberDelete($shipmentNumber, $xRMGAuthToken)
 
 Cancel a shipment.
 
@@ -84,15 +84,15 @@ Delete a shipment. Send a shipment identifier in Url. Successful response will b
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 // Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\ShipmentApi(
+$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse**](../Model/CancelOrUpdateShipmentResponse.md)
+[**\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse**](../Model/CancelOrUpdateShipmentResponse.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentNumberLabelPut**
-> \RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse shipmentNumberLabelPut($shipmentNumber, $xRMGAuthToken, $outputFormat)
+> \RoyalMail\Shipping\Rest\Api\models\LabelResponse shipmentNumberLabelPut($shipmentNumber, $xRMGAuthToken, $outputFormat)
 
 Create shipment label.
 
@@ -145,15 +145,15 @@ This method returns a label for the shipment identifier passed in the url.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 // Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\ShipmentApi(
+$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse**](../Model/LabelResponse.md)
+[**\RoyalMail\Shipping\Rest\Api\models\LabelResponse**](../Model/LabelResponse.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentNumberPut**
-> \RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse shipmentNumberPut($shipmentNumber, $xRMGAuthToken, $detail)
+> \RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse shipmentNumberPut($shipmentNumber, $xRMGAuthToken, $detail)
 
 Update a shipment.
 
@@ -208,15 +208,15 @@ Update a shipment. Send a shipment request in body. On successful response, it w
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 // Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\ShipmentApi(
+$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -224,7 +224,7 @@ $apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\ShipmentApi(
 );
 $shipmentNumber = "shipmentNumber_example"; // string | Shipment number.
 $xRMGAuthToken = "xRMGAuthToken_example"; // string | Authorisation token
-$detail = new \RoyalMail\Shipping\Rest\Api\Client\models\Shipment(); // \RoyalMail\Shipping\Rest\Api\Client\models\Shipment | 
+$detail = new \RoyalMail\Shipping\Rest\Api\models\Shipment(); // \RoyalMail\Shipping\Rest\Api\models\Shipment | 
 
 try {
     $result = $apiInstance->shipmentNumberPut($shipmentNumber, $xRMGAuthToken, $detail);
@@ -241,11 +241,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipmentNumber** | **string**| Shipment number. |
  **xRMGAuthToken** | **string**| Authorisation token |
- **detail** | [**\RoyalMail\Shipping\Rest\Api\Client\models\Shipment**](../Model/Shipment.md)|  |
+ **detail** | [**\RoyalMail\Shipping\Rest\Api\models\Shipment**](../Model/Shipment.md)|  |
 
 ### Return type
 
-[**\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse**](../Model/CancelOrUpdateShipmentResponse.md)
+[**\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse**](../Model/CancelOrUpdateShipmentResponse.md)
 
 ### Authorization
 

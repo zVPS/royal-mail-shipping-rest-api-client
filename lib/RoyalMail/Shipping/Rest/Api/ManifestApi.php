@@ -1,10 +1,11 @@
 <?php
+
 /**
  * ManifestApi
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\RoyalMail\Shipping\Rest\Api;
+namespace RoyalMail\Shipping\Rest\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use RoyalMail\Shipping\Rest\Api\Client\ApiException;
-use RoyalMail\Shipping\Rest\Api\Client\Configuration;
-use RoyalMail\Shipping\Rest\Api\Client\HeaderSelector;
-use RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use RoyalMail\Shipping\Rest\Api\ApiException;
+use RoyalMail\Shipping\Rest\Api\Configuration;
+use RoyalMail\Shipping\Rest\Api\HeaderSelector;
+use RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * ManifestApi Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,11 +89,11 @@ class ManifestApi
      * Create shipping manifest.
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest $manifestRequest manifestRequest (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\ManifestRequest $manifestRequest manifestRequest (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\ManifestResponse
+     * @return \RoyalMail\Shipping\Rest\Api\models\ManifestResponse
      */
     public function manifestPost($xRMGAuthToken, $manifestRequest)
     {
@@ -106,15 +107,15 @@ class ManifestApi
      * Create shipping manifest.
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest $manifestRequest (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\ManifestRequest $manifestRequest (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\ManifestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\ManifestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function manifestPostWithHttpInfo($xRMGAuthToken, $manifestRequest)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\ManifestResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\ManifestResponse';
         $request = $this->manifestPostRequest($xRMGAuthToken, $manifestRequest);
 
         try {
@@ -166,7 +167,7 @@ class ManifestApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ManifestResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ManifestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +175,7 @@ class ManifestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +183,7 @@ class ManifestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +191,7 @@ class ManifestApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +199,7 @@ class ManifestApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +207,7 @@ class ManifestApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +215,7 @@ class ManifestApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +223,7 @@ class ManifestApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -238,7 +239,7 @@ class ManifestApi
      * Create shipping manifest.
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest $manifestRequest (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\ManifestRequest $manifestRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,14 +260,14 @@ class ManifestApi
      * Create shipping manifest.
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest $manifestRequest (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\ManifestRequest $manifestRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function manifestPostAsyncWithHttpInfo($xRMGAuthToken, $manifestRequest)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\ManifestResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\ManifestResponse';
         $request = $this->manifestPostRequest($xRMGAuthToken, $manifestRequest);
 
         return $this->client
@@ -310,7 +311,7 @@ class ManifestApi
      * Create request for operation 'manifestPost'
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest $manifestRequest (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\ManifestRequest $manifestRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -429,9 +430,9 @@ class ManifestApi
      * @param  string $salesOrderNumber The Sales Order Number, which is available via the GUI the day after the manifest was created. (optional)
      * @param  string $manifestBatchNumber This is the batch number to print and is returned by a prior call to create manifest operation. (optional)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\PrintManifestResponse
+     * @return \RoyalMail\Shipping\Rest\Api\models\PrintManifestResponse
      */
     public function manifestPut($xRMGAuthToken, $salesOrderNumber = null, $manifestBatchNumber = null)
     {
@@ -448,13 +449,13 @@ class ManifestApi
      * @param  string $salesOrderNumber The Sales Order Number, which is available via the GUI the day after the manifest was created. (optional)
      * @param  string $manifestBatchNumber This is the batch number to print and is returned by a prior call to create manifest operation. (optional)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\PrintManifestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\PrintManifestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function manifestPutWithHttpInfo($xRMGAuthToken, $salesOrderNumber = null, $manifestBatchNumber = null)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\PrintManifestResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\PrintManifestResponse';
         $request = $this->manifestPutRequest($xRMGAuthToken, $salesOrderNumber, $manifestBatchNumber);
 
         try {
@@ -506,7 +507,7 @@ class ManifestApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\PrintManifestResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\PrintManifestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +515,7 @@ class ManifestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +523,7 @@ class ManifestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +531,7 @@ class ManifestApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -538,7 +539,7 @@ class ManifestApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -546,7 +547,7 @@ class ManifestApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -554,7 +555,7 @@ class ManifestApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -562,7 +563,7 @@ class ManifestApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -608,7 +609,7 @@ class ManifestApi
      */
     public function manifestPutAsyncWithHttpInfo($xRMGAuthToken, $salesOrderNumber = null, $manifestBatchNumber = null)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\PrintManifestResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\PrintManifestResponse';
         $request = $this->manifestPutRequest($xRMGAuthToken, $salesOrderNumber, $manifestBatchNumber);
 
         return $this->client

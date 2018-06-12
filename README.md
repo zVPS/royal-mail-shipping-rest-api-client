@@ -57,22 +57,22 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 // Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\ManifestApi(
+$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\ManifestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRMGAuthToken = "xRMGAuthToken_example"; // string | Authorisation token
-$manifestRequest = new \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest(); // \RoyalMail\Shipping\Rest\Api\Client\models\ManifestRequest | 
+$manifestRequest = new \RoyalMail\Shipping\Rest\Api\models\ManifestRequest(); // \RoyalMail\Shipping\Rest\Api\models\ManifestRequest | 
 
 try {
     $result = $apiInstance->manifestPost($xRMGAuthToken, $manifestRequest);

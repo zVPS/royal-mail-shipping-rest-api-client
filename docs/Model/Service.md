@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **offering** | **string** | The Service Offering code for the mail item ordered. Please note that this field is case sensitive. For the list of permissible values, please go to Pro Shipping V2 API page on the Royal Mail API (Developer) Portal and refer to Shipping API Reference Data | [optional] 
 **type** | **string** | The system Service Type of the shipment. For the list of permissible values, please go to Pro Shipping V2 API page on the Royal Mail API (Developer)  and refer to Shipping API Reference Data. | [optional] 
 **signature** | **string** | For RM Tracked items only, this element specifies whether a signature is required on delivery. If this element is not included then it defaults to false. | [optional] 
-**enhancements** | [**\RoyalMail\Shipping\Rest\Api\Client\models\ServiceEnhancements**](ServiceEnhancements.md) |  | [optional] 
+**enhancements** | [**\RoyalMail\Shipping\Rest\Api\models\ServiceEnhancements**](ServiceEnhancements.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

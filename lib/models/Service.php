@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Service
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +28,16 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\models;
+namespace RoyalMail\Shipping\Rest\Api\models;
 
 use \ArrayAccess;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * Service Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +63,7 @@ class Service implements ModelInterface, ArrayAccess
         'offering' => 'string',
         'type' => 'string',
         'signature' => 'string',
-        'enhancements' => '\RoyalMail\Shipping\Rest\Api\Client\models\ServiceEnhancements'
+        'enhancements' => '\RoyalMail\Shipping\Rest\Api\models\ServiceEnhancements'
     ];
 
     /**
@@ -358,7 +359,7 @@ class Service implements ModelInterface, ArrayAccess
     /**
      * Gets enhancements
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\ServiceEnhancements
+     * @return \RoyalMail\Shipping\Rest\Api\models\ServiceEnhancements
      */
     public function getEnhancements()
     {
@@ -368,7 +369,7 @@ class Service implements ModelInterface, ArrayAccess
     /**
      * Sets enhancements
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\ServiceEnhancements $enhancements enhancements
+     * @param \RoyalMail\Shipping\Rest\Api\models\ServiceEnhancements $enhancements enhancements
      *
      * @return $this
      */

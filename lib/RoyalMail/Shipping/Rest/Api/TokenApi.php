@@ -1,10 +1,11 @@
 <?php
+
 /**
  * TokenApi
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\RoyalMail\Shipping\Rest\Api;
+namespace RoyalMail\Shipping\Rest\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use RoyalMail\Shipping\Rest\Api\Client\ApiException;
-use RoyalMail\Shipping\Rest\Api\Client\Configuration;
-use RoyalMail\Shipping\Rest\Api\Client\HeaderSelector;
-use RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use RoyalMail\Shipping\Rest\Api\ApiException;
+use RoyalMail\Shipping\Rest\Api\Configuration;
+use RoyalMail\Shipping\Rest\Api\HeaderSelector;
+use RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * TokenApi Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,9 +91,9 @@ class TokenApi
      * @param  string $xRMGUserName User Name (required)
      * @param  string $xRMGPassword Password (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\Token
+     * @return \RoyalMail\Shipping\Rest\Api\models\Token
      */
     public function getToken($xRMGUserName, $xRMGPassword)
     {
@@ -108,13 +109,13 @@ class TokenApi
      * @param  string $xRMGUserName User Name (required)
      * @param  string $xRMGPassword Password (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\Token, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\Token, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenWithHttpInfo($xRMGUserName, $xRMGPassword)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\Token';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\Token';
         $request = $this->getTokenRequest($xRMGUserName, $xRMGPassword);
 
         try {
@@ -166,7 +167,7 @@ class TokenApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Token',
+                        '\RoyalMail\Shipping\Rest\Api\models\Token',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +175,7 @@ class TokenApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +183,7 @@ class TokenApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +191,7 @@ class TokenApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +199,7 @@ class TokenApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +207,7 @@ class TokenApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +215,7 @@ class TokenApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +223,7 @@ class TokenApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,7 +267,7 @@ class TokenApi
      */
     public function getTokenAsyncWithHttpInfo($xRMGUserName, $xRMGPassword)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\Token';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\Token';
         $request = $this->getTokenRequest($xRMGUserName, $xRMGPassword);
 
         return $this->client

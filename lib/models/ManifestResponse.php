@@ -1,11 +1,12 @@
 <?php
+
 /**
  * ManifestResponse
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +28,17 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\models;
+namespace RoyalMail\Shipping\Rest\Api\models;
 
 use \ArrayAccess;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * ManifestResponse Class Doc Comment
  *
  * @category Class
  * @description Create Manifest Response
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +61,7 @@ class ManifestResponse implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'batchNumber' => 'int',
         'count' => 'int',
-        'shipments' => '\RoyalMail\Shipping\Rest\Api\Client\models\ManifestShipments'
+        'shipments' => '\RoyalMail\Shipping\Rest\Api\models\ManifestShipments'
     ];
 
     /**
@@ -269,7 +270,7 @@ class ManifestResponse implements ModelInterface, ArrayAccess
     /**
      * Gets shipments
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\ManifestShipments
+     * @return \RoyalMail\Shipping\Rest\Api\models\ManifestShipments
      */
     public function getShipments()
     {
@@ -279,7 +280,7 @@ class ManifestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets shipments
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\ManifestShipments $shipments shipments
+     * @param \RoyalMail\Shipping\Rest\Api\models\ManifestShipments $shipments shipments
      *
      * @return $this
      */

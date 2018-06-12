@@ -1,10 +1,11 @@
 <?php
+
 /**
  * ShipmentApi
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\RoyalMail\Shipping\Rest\Api;
+namespace RoyalMail\Shipping\Rest\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use RoyalMail\Shipping\Rest\Api\Client\ApiException;
-use RoyalMail\Shipping\Rest\Api\Client\Configuration;
-use RoyalMail\Shipping\Rest\Api\Client\HeaderSelector;
-use RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use RoyalMail\Shipping\Rest\Api\ApiException;
+use RoyalMail\Shipping\Rest\Api\Configuration;
+use RoyalMail\Shipping\Rest\Api\HeaderSelector;
+use RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * ShipmentApi Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,11 +89,11 @@ class ShipmentApi
      * Operation to create a shipment
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $createDomesticBody createDomesticBody (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $createDomesticBody createDomesticBody (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse
+     * @return \RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse
      */
     public function domesticPost($xRMGAuthToken, $createDomesticBody)
     {
@@ -106,15 +107,15 @@ class ShipmentApi
      * Operation to create a shipment
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $createDomesticBody (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $createDomesticBody (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function domesticPostWithHttpInfo($xRMGAuthToken, $createDomesticBody)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse';
         $request = $this->domesticPostRequest($xRMGAuthToken, $createDomesticBody);
 
         try {
@@ -166,7 +167,7 @@ class ShipmentApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +175,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +183,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +191,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +199,7 @@ class ShipmentApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +207,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +215,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +223,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -238,7 +239,7 @@ class ShipmentApi
      * Operation to create a shipment
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $createDomesticBody (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $createDomesticBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,14 +260,14 @@ class ShipmentApi
      * Operation to create a shipment
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $createDomesticBody (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $createDomesticBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function domesticPostAsyncWithHttpInfo($xRMGAuthToken, $createDomesticBody)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\CreatedShipmentResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\CreatedShipmentResponse';
         $request = $this->domesticPostRequest($xRMGAuthToken, $createDomesticBody);
 
         return $this->client
@@ -310,7 +311,7 @@ class ShipmentApi
      * Create request for operation 'domesticPost'
      *
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $createDomesticBody (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $createDomesticBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -428,9 +429,9 @@ class ShipmentApi
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse
+     * @return \RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse
      */
     public function shipmentNumberDelete($shipmentNumber, $xRMGAuthToken)
     {
@@ -446,13 +447,13 @@ class ShipmentApi
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentNumberDeleteWithHttpInfo($shipmentNumber, $xRMGAuthToken)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse';
         $request = $this->shipmentNumberDeleteRequest($shipmentNumber, $xRMGAuthToken);
 
         try {
@@ -504,7 +505,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +513,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +521,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +529,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -536,7 +537,7 @@ class ShipmentApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -544,7 +545,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -552,7 +553,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +561,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -604,7 +605,7 @@ class ShipmentApi
      */
     public function shipmentNumberDeleteAsyncWithHttpInfo($shipmentNumber, $xRMGAuthToken)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse';
         $request = $this->shipmentNumberDeleteRequest($shipmentNumber, $xRMGAuthToken);
 
         return $this->client
@@ -772,9 +773,9 @@ class ShipmentApi
      * @param  string $xRMGAuthToken Authorisation token (required)
      * @param  string $outputFormat Label Format Type. The content of response.  &gt; Unspecified / PDF: returns the  standard Base64 Encoded PDF Label DS: returns a data stream  DSPDF: returns both the data stream and the Base64 Encoded PDF Label.  PNG: returns Base64 Encoded PNG images of the 2D Data Matric and 1D Linear Barcode.  DSPNG: returns both the data stream and the Base64 Encoded PNG images of the 2D Data Matric and 1D Linear Barcode. (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse
+     * @return \RoyalMail\Shipping\Rest\Api\models\LabelResponse
      */
     public function shipmentNumberLabelPut($shipmentNumber, $xRMGAuthToken, $outputFormat)
     {
@@ -791,13 +792,13 @@ class ShipmentApi
      * @param  string $xRMGAuthToken Authorisation token (required)
      * @param  string $outputFormat Label Format Type. The content of response.  &gt; Unspecified / PDF: returns the  standard Base64 Encoded PDF Label DS: returns a data stream  DSPDF: returns both the data stream and the Base64 Encoded PDF Label.  PNG: returns Base64 Encoded PNG images of the 2D Data Matric and 1D Linear Barcode.  DSPNG: returns both the data stream and the Base64 Encoded PNG images of the 2D Data Matric and 1D Linear Barcode. (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\LabelResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentNumberLabelPutWithHttpInfo($shipmentNumber, $xRMGAuthToken, $outputFormat)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\LabelResponse';
         $request = $this->shipmentNumberLabelPutRequest($shipmentNumber, $xRMGAuthToken, $outputFormat);
 
         try {
@@ -849,7 +850,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\LabelResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -857,7 +858,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -865,7 +866,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -873,7 +874,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +882,7 @@ class ShipmentApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -889,7 +890,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +898,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +906,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -951,7 +952,7 @@ class ShipmentApi
      */
     public function shipmentNumberLabelPutAsyncWithHttpInfo($shipmentNumber, $xRMGAuthToken, $outputFormat)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\LabelResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\LabelResponse';
         $request = $this->shipmentNumberLabelPutRequest($shipmentNumber, $xRMGAuthToken, $outputFormat);
 
         return $this->client
@@ -1128,11 +1129,11 @@ class ShipmentApi
      *
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $detail detail (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $detail detail (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse
+     * @return \RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse
      */
     public function shipmentNumberPut($shipmentNumber, $xRMGAuthToken, $detail)
     {
@@ -1147,15 +1148,15 @@ class ShipmentApi
      *
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $detail (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $detail (required)
      *
-     * @throws \RoyalMail\Shipping\Rest\Api\Client\ApiException on non-2xx response
+     * @throws \RoyalMail\Shipping\Rest\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentNumberPutWithHttpInfo($shipmentNumber, $xRMGAuthToken, $detail)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse';
         $request = $this->shipmentNumberPutRequest($shipmentNumber, $xRMGAuthToken, $detail);
 
         try {
@@ -1207,7 +1208,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1215,7 +1216,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\ErrorResponse',
+                        '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1223,7 +1224,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1231,7 +1232,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1239,7 +1240,7 @@ class ShipmentApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1247,7 +1248,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1255,7 +1256,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1263,7 +1264,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\RoyalMail\Shipping\Rest\Api\Client\models\Error',
+                        '\RoyalMail\Shipping\Rest\Api\models\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1280,7 +1281,7 @@ class ShipmentApi
      *
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $detail (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $detail (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1302,14 +1303,14 @@ class ShipmentApi
      *
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $detail (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $detail (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function shipmentNumberPutAsyncWithHttpInfo($shipmentNumber, $xRMGAuthToken, $detail)
     {
-        $returnType = '\RoyalMail\Shipping\Rest\Api\Client\models\CancelOrUpdateShipmentResponse';
+        $returnType = '\RoyalMail\Shipping\Rest\Api\models\CancelOrUpdateShipmentResponse';
         $request = $this->shipmentNumberPutRequest($shipmentNumber, $xRMGAuthToken, $detail);
 
         return $this->client
@@ -1354,7 +1355,7 @@ class ShipmentApi
      *
      * @param  string $shipmentNumber Shipment number. (required)
      * @param  string $xRMGAuthToken Authorisation token (required)
-     * @param  \RoyalMail\Shipping\Rest\Api\Client\models\Shipment $detail (required)
+     * @param  \RoyalMail\Shipping\Rest\Api\models\Shipment $detail (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

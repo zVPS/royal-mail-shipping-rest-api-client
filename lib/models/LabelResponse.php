@@ -1,11 +1,12 @@
 <?php
+
 /**
  * LabelResponse
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +28,16 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\models;
+namespace RoyalMail\Shipping\Rest\Api\models;
 
 use \ArrayAccess;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * LabelResponse Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,11 +59,11 @@ class LabelResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'label' => 'string',
-        'labelImages' => '\RoyalMail\Shipping\Rest\Api\Client\models\LabelImages',
+        'labelImages' => '\RoyalMail\Shipping\Rest\Api\models\LabelImages',
         'format' => 'string',
-        'labelData' => '\RoyalMail\Shipping\Rest\Api\Client\models\LabelResponseLabelData',
-        'recipientAddress' => '\RoyalMail\Shipping\Rest\Api\Client\models\RecipientAddress',
-        'recipientContact' => '\RoyalMail\Shipping\Rest\Api\Client\models\RecipientContact'
+        'labelData' => '\RoyalMail\Shipping\Rest\Api\models\LabelResponseLabelData',
+        'recipientAddress' => '\RoyalMail\Shipping\Rest\Api\models\RecipientAddress',
+        'recipientContact' => '\RoyalMail\Shipping\Rest\Api\models\RecipientContact'
     ];
 
     /**
@@ -262,7 +263,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Gets labelImages
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\LabelImages
+     * @return \RoyalMail\Shipping\Rest\Api\models\LabelImages
      */
     public function getLabelImages()
     {
@@ -272,7 +273,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Sets labelImages
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\LabelImages $labelImages labelImages
+     * @param \RoyalMail\Shipping\Rest\Api\models\LabelImages $labelImages labelImages
      *
      * @return $this
      */
@@ -310,7 +311,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Gets labelData
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\LabelResponseLabelData
+     * @return \RoyalMail\Shipping\Rest\Api\models\LabelResponseLabelData
      */
     public function getLabelData()
     {
@@ -320,7 +321,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Sets labelData
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\LabelResponseLabelData $labelData labelData
+     * @param \RoyalMail\Shipping\Rest\Api\models\LabelResponseLabelData $labelData labelData
      *
      * @return $this
      */
@@ -334,7 +335,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Gets recipientAddress
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\RecipientAddress
+     * @return \RoyalMail\Shipping\Rest\Api\models\RecipientAddress
      */
     public function getRecipientAddress()
     {
@@ -344,7 +345,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipientAddress
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\RecipientAddress $recipientAddress recipientAddress
+     * @param \RoyalMail\Shipping\Rest\Api\models\RecipientAddress $recipientAddress recipientAddress
      *
      * @return $this
      */
@@ -358,7 +359,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Gets recipientContact
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\RecipientContact
+     * @return \RoyalMail\Shipping\Rest\Api\models\RecipientContact
      */
     public function getRecipientContact()
     {
@@ -368,7 +369,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipientContact
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\RecipientContact $recipientContact recipientContact
+     * @param \RoyalMail\Shipping\Rest\Api\models\RecipientContact $recipientContact recipientContact
      *
      * @return $this
      */

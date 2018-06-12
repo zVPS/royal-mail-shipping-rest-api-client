@@ -1,4 +1,4 @@
-# RoyalMail\Shipping\Rest\Api\Client\TokenApi
+# RoyalMail\Shipping\Rest\Api\TokenApi
 
 All URIs are relative to *https://localhost/shipping/v2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getToken**
-> \RoyalMail\Shipping\Rest\Api\Client\models\Token getToken($xRMGUserName, $xRMGPassword)
+> \RoyalMail\Shipping\Rest\Api\models\Token getToken($xRMGUserName, $xRMGPassword)
 
 Method to get a JWT token
 
@@ -20,15 +20,15 @@ This method will accept a DMO/NEOPOST user name and password. On successful vali
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 // Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
+$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Client\Api\TokenApi(
+$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\TokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RoyalMail\Shipping\Rest\Api\Client\models\Token**](../Model/Token.md)
+[**\RoyalMail\Shipping\Rest\Api\models\Token**](../Model/Token.md)
 
 ### Authorization
 

@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Shipment
  *
  * PHP version 5
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +28,16 @@
  * Do not edit the class manually.
  */
 
-namespace RoyalMail\Shipping\Rest\Api\Client\models;
+namespace RoyalMail\Shipping\Rest\Api\models;
 
 use \ArrayAccess;
-use \RoyalMail\Shipping\Rest\Api\Client\ObjectSerializer;
+use \RoyalMail\Shipping\Rest\Api\ObjectSerializer;
 
 /**
  * Shipment Class Doc Comment
  *
  * @category Class
- * @package  RoyalMail\Shipping\Rest\Api\Client
+ * @package  RoyalMail\Shipping\Rest\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,11 +59,11 @@ class Shipment implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'shipmentType' => 'string',
-        'service' => '\RoyalMail\Shipping\Rest\Api\Client\models\Service',
+        'service' => '\RoyalMail\Shipping\Rest\Api\models\Service',
         'shippingDate' => 'string',
-        'items' => '\RoyalMail\Shipping\Rest\Api\Client\models\ShipmentRequestItem',
-        'recipientContact' => '\RoyalMail\Shipping\Rest\Api\Client\models\Contact',
-        'recipientAddress' => '\RoyalMail\Shipping\Rest\Api\Client\models\Address',
+        'items' => '\RoyalMail\Shipping\Rest\Api\models\ShipmentRequestItem',
+        'recipientContact' => '\RoyalMail\Shipping\Rest\Api\models\Contact',
+        'recipientAddress' => '\RoyalMail\Shipping\Rest\Api\models\Address',
         'senderReference' => 'string',
         'departmentReference' => 'string',
         'customerReference' => 'string',
@@ -286,7 +287,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets service
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\Service
+     * @return \RoyalMail\Shipping\Rest\Api\models\Service
      */
     public function getService()
     {
@@ -296,7 +297,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets service
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\Service $service service
+     * @param \RoyalMail\Shipping\Rest\Api\models\Service $service service
      *
      * @return $this
      */
@@ -334,7 +335,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\ShipmentRequestItem
+     * @return \RoyalMail\Shipping\Rest\Api\models\ShipmentRequestItem
      */
     public function getItems()
     {
@@ -344,7 +345,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\ShipmentRequestItem $items items
+     * @param \RoyalMail\Shipping\Rest\Api\models\ShipmentRequestItem $items items
      *
      * @return $this
      */
@@ -358,7 +359,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets recipientContact
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\Contact
+     * @return \RoyalMail\Shipping\Rest\Api\models\Contact
      */
     public function getRecipientContact()
     {
@@ -368,7 +369,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets recipientContact
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\Contact $recipientContact recipientContact
+     * @param \RoyalMail\Shipping\Rest\Api\models\Contact $recipientContact recipientContact
      *
      * @return $this
      */
@@ -382,7 +383,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets recipientAddress
      *
-     * @return \RoyalMail\Shipping\Rest\Api\Client\models\Address
+     * @return \RoyalMail\Shipping\Rest\Api\models\Address
      */
     public function getRecipientAddress()
     {
@@ -392,7 +393,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets recipientAddress
      *
-     * @param \RoyalMail\Shipping\Rest\Api\Client\models\Address $recipientAddress recipientAddress
+     * @param \RoyalMail\Shipping\Rest\Api\models\Address $recipientAddress recipientAddress
      *
      * @return $this
      */
