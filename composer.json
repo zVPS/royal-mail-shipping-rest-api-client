@@ -35,6 +35,6 @@
         "psr-4": { "RoyalMail\\Shipping\\Rest\\Api\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "RoyalMail\\Shipping\\Rest\\Api\\" : "test/" }
+        "psr-4": { "RoyalMail\\Shipping\\Rest\\Api\\Test\\" : "test/" }
     }
 }

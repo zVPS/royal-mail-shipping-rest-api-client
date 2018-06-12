@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace RoyalMail\Shipping\Rest\Api;
+namespace RoyalMail\Shipping\Rest\Api\Test;
 
 /**
  * ShipmentWithBarcodeAndWeightTest Class Doc Comment

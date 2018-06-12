@@ -27,7 +27,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace RoyalMail\Shipping\Rest\Api;
+namespace RoyalMail\Shipping\Rest\Api\Test;
 
 use \RoyalMail\Shipping\Rest\Api\Configuration;
 use \RoyalMail\Shipping\Rest\Api\ApiException;
