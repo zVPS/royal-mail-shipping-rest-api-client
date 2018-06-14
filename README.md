@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/zVPS/royal-mail-shipping-rest-api-client.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "zVPS/royal-mail-shipping-rest-api-client": "*@dev"
   }
 }
 ```
@@ -36,7 +36,7 @@ Then run `composer install`
 Download the files and include `autoload.php`:
 
 ```php
-    require_once('/path/to/SwaggerClient-php/vendor/autoload.php');
+    require_once 'vendor/autoload.php';
 ```
 
 ## Tests
@@ -54,39 +54,34 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once 'vendor/autoload.php';
 
-// Configure API key authorization: clientID
-$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
-// Configure API key authorization: clientSecret
-$config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKey('X-IBM-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
+use \RoyalMail\Shipping\Rest\Api\Configuration;
+use \RoyalMail\Shipping\Rest\Api\TokenApi;
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\Api\ManifestApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$xRMGAuthToken = "xRMGAuthToken_example"; // string | Authorisation token
-$manifestRequest = new \RoyalMail\Shipping\Rest\Api\models\ManifestRequest(); // \RoyalMail\Shipping\Rest\Api\models\ManifestRequest | 
+$config = Configuration::getDefaultConfiguration()
+        ->setApiKey('X-IBM-Client-Id', 'CLIENT_ID')
+        ->setApiKey('X-IBM-Client-Secret', 'CLIENT_SECRET')
+        ->setHost('https://api.royalmail.net');
+
+$apiInstance = new TokenApi(new GuzzleHttp\Client(), $config);
 
 try {
-    $result = $apiInstance->manifestPost($xRMGAuthToken, $manifestRequest);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ManifestApi->manifestPost: ', $e->getMessage(), PHP_EOL;
+    // X-RMG values come from your ProShipping Account under maintenance->posting locations->api security
+    // password must be sha1 encoded binary output to base64
+    $token = $apiInstance->getToken('X-RMG_USERNAME', base64_encode(sha1('X-RMG_PASSWORD', true))); 
+    print_r($token);
+} catch (\Exception $e) {
+    echo 'Exception when calling TokenApi->getToken: ', $e->getMessage(), PHP_EOL;
+    exit(1);
 }
 
-?>
+$xRMGAuthToken = $token->getToken(); // string | Authorisation token
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost/shipping/v2*
+All URIs are relative to *https://api.royalmail.net/shipping/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
