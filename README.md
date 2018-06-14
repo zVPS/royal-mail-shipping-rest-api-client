@@ -62,7 +62,7 @@ use \RoyalMail\Shipping\Rest\Api\TokenApi;
 $config = Configuration::getDefaultConfiguration()
         ->setApiKey('X-IBM-Client-Id', 'CLIENT_ID')
         ->setApiKey('X-IBM-Client-Secret', 'CLIENT_SECRET')
-        ->setHost('https://api.royalmail.net');
+        ->setHost('https://api.royalmail.net/shipping/v2');
 
 $apiInstance = new TokenApi(new GuzzleHttp\Client(), $config);
 
