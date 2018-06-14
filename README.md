@@ -72,7 +72,7 @@ try {
     $token = $apiInstance->getToken('X-RMG_USERNAME', base64_encode(sha1('X-RMG_PASSWORD', true))); 
     print_r($token);
 } catch (\Exception $e) {
-    echo 'Exception when calling TokenApi->getToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokenApi->getToken: ', $e->getResponseBody(), PHP_EOL;
     exit(1);
 }
 
