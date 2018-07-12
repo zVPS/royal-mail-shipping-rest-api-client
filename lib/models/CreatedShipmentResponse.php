@@ -58,7 +58,7 @@ class CreatedShipmentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'completedShipments' => '\RoyalMail\Shipping\Rest\Api\models\CompletedShipments'
+        'completedShipments' => 'map[array,\RoyalMail\Shipping\Rest\Api\models\CompletedShipment]'
     ];
 
     /**
@@ -215,7 +215,7 @@ class CreatedShipmentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets completedShipments
      *
-     * @return \RoyalMail\Shipping\Rest\Api\models\CompletedShipments
+     * @return \RoyalMail\Shipping\Rest\Api\models\CompletedShipment[]
      */
     public function getCompletedShipments()
     {
@@ -225,7 +225,7 @@ class CreatedShipmentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets completedShipments
      *
-     * @param \RoyalMail\Shipping\Rest\Api\models\CompletedShipments $completedShipments completedShipments
+     * @param \RoyalMail\Shipping\Rest\Api\models\CompletedShipment[] $completedShipments completedShipments
      *
      * @return $this
      */

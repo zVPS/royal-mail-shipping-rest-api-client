@@ -185,7 +185,7 @@ class CompletedShipment implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->contianer['shipmentItems'] = isset($data['shipmentItems']) ? $data['shipmentItems'] : null;
+        $this->container['shipmentItems'] = isset($data['shipmentItems']) ? $data['shipmentItems'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
     }
 
@@ -248,7 +248,7 @@ class CompletedShipment implements ModelInterface, ArrayAccess
     public function setShipmentItems($shipmentItems)
     {
         $this->container['shipmentItems'] = $shipmentItems;
-        
+            
         return $this;
     }
     
