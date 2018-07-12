@@ -105,7 +105,7 @@ class ShipmentResponseItem implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'warnings' => 'Warnings',
-        'number' => 'number',
+        'number' => 'shipmentNumber',
         'itemID' => 'itemID',
         'status' => 'status',
         'validFrom' => 'validFrom'
