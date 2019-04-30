@@ -55,7 +55,7 @@ class CreatedShipmentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'completedShipments' => 'map[array,\RoyalMail\Shipping\Rest\Api\models\CompletedShipment]'
+        'completedShipments' => 'map[array,\RoyalMail\Shipping\Rest\Api\models\CompletedShipment]' /** @internal Manual fix and removed CompletedShipments.php */
     ];
 
     /**

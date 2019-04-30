@@ -59,7 +59,7 @@ class LabelResponse implements ModelInterface, ArrayAccess
         'label' => 'string',
         'labelImages' => '\RoyalMail\Shipping\Rest\Api\models\LabelImages',
         'format' => 'string',
-        'labelData' => 'object', /** @todo check this */
+        'labelData' => '\RoyalMail\Shipping\Rest\Api\models\LabelResponseLabelData', /** @internal Manual fix and keep LabelResponseLabelData.php */
         'recipientAddress' => '\RoyalMail\Shipping\Rest\Api\models\RecipientAddress',
         'recipientContact' => '\RoyalMail\Shipping\Rest\Api\models\RecipientContact'
     ];
