@@ -67,7 +67,7 @@ class ShipmentsRequest implements ModelInterface, ArrayAccess
         'departmentReference' => 'string',
         'customerReference' => 'string',
         'safePlace' => 'string',
-        'internationalInfo' => 'object'
+        'internationalInfo' => '\RoyalMail\Shipping\Rest\Api\models\InternationalInfo'
     ];
 
     /**
@@ -549,7 +549,7 @@ class ShipmentsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets internationalInfo
      *
-     * @return object
+     * @return \RoyalMail\Shipping\Rest\Api\models\InternationalInfo
      */
     public function getInternationalInfo()
     {
@@ -559,7 +559,7 @@ class ShipmentsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets internationalInfo
      *
-     * @param object $internationalInfo internationalInfo
+     * @param \RoyalMail\Shipping\Rest\Api\models\InternationalInfo $internationalInfo internationalInfo
      *
      * @return $this
      */
