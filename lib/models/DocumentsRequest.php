@@ -162,7 +162,9 @@ class DocumentsRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const DOCUMENT_NAME_CI = 'CN22,CN23,CI';
+    const DOCUMENT_NAME_CI   = 'CI';
+    const DOCUMENT_NAME_CN22 = 'CN22';
+    const DOCUMENT_NAME_CN23 = 'CN23';
 
     /**
      * Gets allowable values of the enum
@@ -172,7 +174,10 @@ class DocumentsRequest implements ModelInterface, ArrayAccess
     public function getDocumentNameAllowableValues()
     {
         return [
-            self::DOCUMENT_NAME_CI,        ];
+            self::DOCUMENT_NAME_CI,
+            self::DOCUMENT_NAME_CN22,
+            self::DOCUMENT_NAME_CN23
+        ];
     }
 
     /**
