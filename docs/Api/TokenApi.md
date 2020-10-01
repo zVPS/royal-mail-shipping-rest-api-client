@@ -1,17 +1,17 @@
 # RoyalMail\Shipping\Rest\Api\TokenApi
 
-All URIs are relative to *///shipping/v2*
+All URIs are relative to *///shipping/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getToken**](TokenApi.md#getToken) | **GET** /token | Method to get a JSON Web Token (JWT).
+[**authenticatePost**](TokenApi.md#authenticatePost) | **POST** /token | Authenticates a User and provides token.
 
-# **getToken**
-> \RoyalMail\Shipping\Rest\Api\models\Token getToken($xRMGUserName, $xRMGPassword)
+# **authenticatePost**
+> authenticatePost($xRMGSecurityUsername, $xRMGSecurityPassword)
 
-Method to get a JSON Web Token (JWT).
+Authenticates a User and provides token.
 
-This method accepts a Royal Mail issued user name and (encoded SHA-1 hash) password. On successful validation of the user's credentials, a JWT valid for 4 hours is returned. The user must send this JWT in the *X-RMG-Auth-Token* header when making subsequent calls to this API's business operations. > **Use the Password Generator utility attachment on the Developer Portal API Shipping V2 (REST) page to hash and encode the plain text password.**
+Provides security token.
 
 ### Example
 ```php
@@ -25,20 +25,19 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Secret', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\Api\RoyalMail\Shipping\Rest\Api\TokenApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ApiTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$xRMGUserName = "xRMGUserName_example"; // string | User Name
-$xRMGPassword = "xRMGPassword_example"; // string | Encoded SHA-1 hashed password.
+$xRMGSecurityUsername = "xRMGSecurityUsername_example"; // string | User Name
+$xRMGSecurityPassword = "xRMGSecurityPassword_example"; // string | Password in plain text
 
 try {
-    $result = $apiInstance->getToken($xRMGUserName, $xRMGPassword);
-    print_r($result);
+    $apiInstance->authenticatePost($xRMGSecurityUsername, $xRMGSecurityPassword);
 } catch (Exception $e) {
-    echo 'Exception when calling TokenApi->getToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokenApi->authenticatePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -47,12 +46,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xRMGUserName** | **string**| User Name |
- **xRMGPassword** | **string**| Encoded SHA-1 hashed password. |
+ **xRMGSecurityUsername** | **string**| User Name |
+ **xRMGSecurityPassword** | **string**| Password in plain text |
 
 ### Return type
 
-[**\RoyalMail\Shipping\Rest\Api\models\Token**](../Model/Token.md)
+void (empty response body)
 
 ### Authorization
 
@@ -61,7 +60,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, application/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
