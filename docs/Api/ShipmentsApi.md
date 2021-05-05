@@ -29,7 +29,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -85,7 +85,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,7 +141,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -197,7 +197,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -311,7 +311,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -369,7 +369,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -425,7 +425,7 @@ $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = RoyalMail\Shipping\Rest\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-IBM-Client-Id', 'Bearer');
 
-$apiInstance = new RoyalMail\Shipping\Rest\ApiShipmentsApi(
+$apiInstance = new RoyalMail\Shipping\Rest\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

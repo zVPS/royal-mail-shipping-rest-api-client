@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **primary1DBarcodeImage** | **string** | Primary 1D Barcode Image&lt;br /&gt;Only populated for Data Stream response where the service requires the barcode on the label.&lt;br /&gt;Base64 Encoded PNG Image of the 1D barcode. | [optional] 
 **returnLabelImageFormat** | **string** | Return Label Image Format | [optional] 
 **returnLabelImage** | **string** | Return Label Image&lt;br /&gt;Any return label that have been created as a result of the request and label option settings.&lt;br /&gt;Depends on ReturnLabelImageFormat.&lt;br /&gt;            &lt;br /&gt;**PDF**&lt;br /&gt;Base 64 encoded PDF&lt;br /&gt;            &lt;br /&gt;**PNG**&lt;br /&gt;Base 64 encoded PNG&lt;br /&gt;            &lt;br /&gt;**ZPL 300 / 203 dpi**&lt;br /&gt;Base 64 encoded PRN (text file) | [optional] 
+**routing** | [**\RoyalMail\Shipping\Rest\Api\models\Routing**](Routing.md) |  | [optional] 
 **httpStatusCode** | **int** | HTTP Status Code | 
 **httpStatusDescription** | **string** | HTTP Status Description | 
 **message** | **string** | Message&lt;br /&gt;Successful response may include a success message.&lt;br /&gt;Failure responses will have general reason as to why. Further details may be contained in the list of errors. | [optional] 
