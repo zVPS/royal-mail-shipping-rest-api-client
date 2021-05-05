@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addressId** | **string** | Shipper Address Id&lt;br /&gt;If supplied all shipper address fields will be ignored and the address from the Address Book will be used. | [optional] 
 **shipperReference** | **string** | Shipper Reference&lt;br /&gt;Your reference for this shipment.&lt;br /&gt;This field is used for Returns processing and is usually the shippers order number provided to the consumer. | [optional] 
+**shipperReference2** | **string** | Shipper Reference 2&lt;br /&gt;Your second reference for this shipment. This field is used for tracking shipment usually the EBAY VTN number provided to the consumer.       &lt;br /&gt;Optional | [optional] 
 **shipperDepartment** | **string** | Shipper Department Code&lt;br /&gt;For Royal Mail shipments, this code must be a valid 10-digit OBA department code. | [optional] 
 **companyName** | **string** | Company Name | [optional] 
 **contactName** | **string** | Contact Name | [optional] 
