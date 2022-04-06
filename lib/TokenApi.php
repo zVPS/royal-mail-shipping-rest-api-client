@@ -169,7 +169,7 @@ class TokenApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\Token',
                         $e->getResponseHeaders()
                     );
@@ -177,7 +177,7 @@ class TokenApi
                     break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
@@ -185,7 +185,7 @@ class TokenApi
                     break;
                 case 403:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
@@ -193,7 +193,7 @@ class TokenApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
@@ -201,7 +201,7 @@ class TokenApi
                     break;
                 case 405:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
@@ -209,7 +209,7 @@ class TokenApi
                     break;
                 case 429:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );
@@ -217,7 +217,7 @@ class TokenApi
                     break;
                 case 503:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ErrorResponse',
                         $e->getResponseHeaders()
                     );

@@ -169,7 +169,7 @@ class ItemsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ItemResponse',
                         $e->getResponseHeaders()
                     );
@@ -177,7 +177,7 @@ class ItemsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ItemResponse',
                         $e->getResponseHeaders()
                     );
@@ -456,7 +456,7 @@ class ItemsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ItemResponse',
                         $e->getResponseHeaders()
                     );
@@ -740,7 +740,7 @@ class ItemsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\Item',
                         $e->getResponseHeaders()
                     );
@@ -1022,7 +1022,7 @@ class ItemsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\Item[]',
                         $e->getResponseHeaders()
                     );
@@ -1291,7 +1291,7 @@ class ItemsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ItemResponse',
                         $e->getResponseHeaders()
                     );
@@ -1299,7 +1299,7 @@ class ItemsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ItemResponse',
                         $e->getResponseHeaders()
                     );

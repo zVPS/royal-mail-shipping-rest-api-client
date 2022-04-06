@@ -169,7 +169,7 @@ class AddressesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -177,7 +177,7 @@ class AddressesApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -456,7 +456,7 @@ class AddressesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -464,7 +464,7 @@ class AddressesApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -472,7 +472,7 @@ class AddressesApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -756,7 +756,7 @@ class AddressesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\Address',
                         $e->getResponseHeaders()
                     );
@@ -1038,7 +1038,7 @@ class AddressesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\Address[]',
                         $e->getResponseHeaders()
                     );
@@ -1307,7 +1307,7 @@ class AddressesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -1315,7 +1315,7 @@ class AddressesApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );
@@ -1323,7 +1323,7 @@ class AddressesApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\AddressResponse',
                         $e->getResponseHeaders()
                     );

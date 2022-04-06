@@ -169,7 +169,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsCancelResponse',
                         $e->getResponseHeaders()
                     );
@@ -177,7 +177,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsCancelResponse',
                         $e->getResponseHeaders()
                     );
@@ -185,7 +185,7 @@ class ShipmentsApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsCancelResponse',
                         $e->getResponseHeaders()
                     );
@@ -464,7 +464,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentCreateResponse',
                         $e->getResponseHeaders()
                     );
@@ -472,7 +472,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentCreateResponse',
                         $e->getResponseHeaders()
                     );
@@ -751,7 +751,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsDeferResponse',
                         $e->getResponseHeaders()
                     );
@@ -759,7 +759,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsDeferResponse',
                         $e->getResponseHeaders()
                     );
@@ -767,7 +767,7 @@ class ShipmentsApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsDeferResponse',
                         $e->getResponseHeaders()
                     );
@@ -1046,7 +1046,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsHoldResponse',
                         $e->getResponseHeaders()
                     );
@@ -1054,7 +1054,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsHoldResponse',
                         $e->getResponseHeaders()
                     );
@@ -1062,7 +1062,7 @@ class ShipmentsApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsHoldResponse',
                         $e->getResponseHeaders()
                     );
@@ -1343,7 +1343,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\PrintDocumentResponse',
                         $e->getResponseHeaders()
                     );
@@ -1351,7 +1351,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\PrintDocumentResponse',
                         $e->getResponseHeaders()
                     );
@@ -1359,7 +1359,7 @@ class ShipmentsApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\PrintDocumentResponse',
                         $e->getResponseHeaders()
                     );
@@ -1657,7 +1657,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\PrintLabelResponse',
                         $e->getResponseHeaders()
                     );
@@ -1665,7 +1665,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\PrintLabelResponse',
                         $e->getResponseHeaders()
                     );
@@ -1673,7 +1673,7 @@ class ShipmentsApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\PrintLabelResponse',
                         $e->getResponseHeaders()
                     );
@@ -1969,7 +1969,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsReleaseResponse',
                         $e->getResponseHeaders()
                     );
@@ -1977,7 +1977,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsReleaseResponse',
                         $e->getResponseHeaders()
                     );
@@ -1985,7 +1985,7 @@ class ShipmentsApi
                     break;
                 case 404:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ShipmentsReleaseResponse',
                         $e->getResponseHeaders()
                     );
@@ -2264,7 +2264,7 @@ class ShipmentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ServiceAvailabilityResponse',
                         $e->getResponseHeaders()
                     );
@@ -2272,7 +2272,7 @@ class ShipmentsApi
                     break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
+                        json_decode($e->getResponseBody()),
                         '\RoyalMail\Shipping\Rest\Api\models\ServiceAvailabilityResponse',
                         $e->getResponseHeaders()
                     );
